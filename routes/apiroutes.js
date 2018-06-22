@@ -1,6 +1,6 @@
 var db = require("../models");
 module.exports = function (app) {
-    app.get("api/todos", function (req, res) {
+    app.get("/api/todos", function (req, res) {
         db.to_do.findAll({}).then(function (todosdata) {
             res.json(todosdata);
         });
